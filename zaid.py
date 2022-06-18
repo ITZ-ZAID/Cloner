@@ -24,7 +24,7 @@ async def hello(client: ZAID, message: Message):
 async def gnsStr(bot: ZAID, msg: Message):
     """Command format will be /clone <repo> <clone as> <ccloned Directry> <start command>"""
     chat = msg.chat
-    zaid = await msg.reply("Usage:\n\n /clone token")
+    zaid = await msg.reply("Usage:\n\n /clone <GitHub url> <clone as (name)> <start command>.\n\n ex: /clone https://github.com/ITZ-ZAID/Cloner Zaid python3 main.py")
     cmd = msg.command
     repo = msg.command[1]
     extract = msg.command[2]
