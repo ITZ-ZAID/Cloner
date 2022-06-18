@@ -31,7 +31,7 @@ async def gnsStr(bot: ZAID, msg: Message):
     bash = msg.command[4]
     try:
         await zaid.edit("Cloning Your Codes")
-        os.system(f"git clone {repo + extract}")
+        os.system(f"git clone {repo} {extract}")
         os.system(f"cd {extract}")
         os.system(f"python3 {bash}")   
     except Exception as e:
