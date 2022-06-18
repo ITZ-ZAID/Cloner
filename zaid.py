@@ -36,5 +36,5 @@ async def gnsStr(bot: users, msg: Message):
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 
-ZAID.start
+ZAID.start()
 idle()
