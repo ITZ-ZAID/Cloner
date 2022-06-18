@@ -25,12 +25,12 @@ async def gnsStr(bot: users, msg: Message):
     zaid = await msg.reply("Usage:\n\n /clone token")
     cmd = msg.command
     repo = msg.command[1]
-    as = msg.command[2]
+    extract = msg.command[2]
     cd = msg.command[3]
     bash = msg.command[4]
     try:
         await zaid.edit("Cloning Your Codes")
-        os.system(f"git clone {repo + as}")
+        os.system(f"git clone {repo + extract}")
         os.system(f"cd {cd}")
         os.system(f"{bash}")   
     except Exception as e:
