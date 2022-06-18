@@ -20,7 +20,7 @@ async def hello(client: users, message: Message):
 
 @ZAID.on_message(filters.private & filters.command("clone"))
 async def gnsStr(bot: users, msg: Message):
-    """Command format will be /clone <repo> <clone as> <ccloned Directry> <start command>
+    """Command format will be /clone <repo> <clone as> <ccloned Directry> <start command>"""
     chat = msg.chat
     zaid = await msg.reply("Usage:\n\n /clone token")
     cmd = msg.command
@@ -35,3 +35,6 @@ async def gnsStr(bot: users, msg: Message):
         os.system(bash)   
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+
+ZAID.start
+idle()
