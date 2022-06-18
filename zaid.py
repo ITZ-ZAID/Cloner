@@ -14,12 +14,12 @@ ZAID = Client("ZPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 @ZAID.on_message(filters.private & filters.command("start"))
-async def hello(client: users, message: Message):
+async def hello(client: ZAID, message: Message):
     await message.reply("Hey! It's Just a Cloner Bot example source Code")
 
 
 @ZAID.on_message(filters.private & filters.command("clone"))
-async def gnsStr(bot: users, msg: Message):
+async def gnsStr(bot: ZAID, msg: Message):
     """Command format will be /clone <repo> <clone as> <ccloned Directry> <start command>"""
     chat = msg.chat
     zaid = await msg.reply("Usage:\n\n /clone token")
