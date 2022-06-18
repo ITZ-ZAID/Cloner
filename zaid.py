@@ -30,9 +30,9 @@ async def gnsStr(bot: users, msg: Message):
     bash = msg.command[4]
     try:
         await zaid.edit("Cloning Your Codes")
-        os.system([repo + as])
-        os.system(cd f"{cd}")
-        os.system(bash)   
+        os.system(f"{repo + as}")
+        os.system(f"cd {cd}")
+        os.system(f"{bash}")   
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 
