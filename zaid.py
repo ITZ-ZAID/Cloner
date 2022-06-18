@@ -5,6 +5,8 @@ import time
 from pyrogram import *
 from pyrogram.types import *
 
+os.system("apt install git curl python3-pip ffmpeg -y")
+
 
 API_ID = ""
 API_HASH = ""
