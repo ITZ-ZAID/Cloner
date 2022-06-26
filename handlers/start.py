@@ -1,3 +1,6 @@
+#Copyright By Itz-Zaid
+# @Timesnotwaiting on Telegram!
+
 from pyrogram import Client
 from pyrogram.types import *
 from pyrogram import filters
