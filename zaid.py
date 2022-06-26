@@ -21,18 +21,18 @@ async def hello(client: ZAID, message: Message):
 
 
 @ZAID.on_message(filters.private & filters.command("clone"))
-async def gnsStr(bot: ZAID, msg: Message):
-    """Command format will be /clone <repo> <clone as> <ccloned Directry> <start command>"""
+async def clone(bot: ZAID, msg: Message):
     chat = msg.chat
-    zaid = await msg.reply("Usage:\n\n /clone <GitHub url> <clone as (name)> <start command>.\n\n ex: /clone https://github.com/ITZ-ZAID/Cloner Zaid python3 main.py")
+    text = await msg.reply("Usage:\n\n /clone token")
     cmd = msg.command
-    repo = msg.command[1]
-    extract = msg.command[2]
-    bash = msg.command[4]
+    phone = msg.command[1]
     try:
-        await zaid.edit("Cloning Your Codes")
-        os.system(f"git clone {repo} {extract} && cd {extract} && pip3 install -U -r requirements.txt && python3 {bash}") 
-        await zaid.edit("Done ✅")  
+        await text.edit("Booting Your Client")
+        client = Client(":memory:", API_ID, API_HASH, bot_token=phone, plugins={"root": "handlers"})
+        await client.start()
+        idle()
+        user = await client.get_me()
+        await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Now Add Your Bot And Assistant @Amala_music_assistant_1 To Your Chat!\n\nThanks for Cloning.")
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 
