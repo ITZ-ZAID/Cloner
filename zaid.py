@@ -21,7 +21,7 @@ async def hello(client: ZAID, message: Message):
 
 ##Copy from here 
 
-© By Itz-Zaid Your motherfucker if uh Don't gives credits.
+# © By Itz-Zaid Your motherfucker if uh Don't gives credits.
 @ZAID.on_message(filters.private & filters.command("clone"))
 async def clone(bot: ZAID, msg: Message):
     chat = msg.chat
